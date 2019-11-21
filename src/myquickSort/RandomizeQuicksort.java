@@ -1,8 +1,10 @@
 package myquickSort;
 
-import java.lang.Comparable;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
-public class QuickSort {
+public class RandomizeQuicksort {
     public static void sort(Comparable[] arr){
         sort(arr, 0, arr.length - 1);
 
@@ -12,7 +14,10 @@ public class QuickSort {
             return;
         }
         int low = i, high = j;
-        Comparable t = arr[low];
+        Random rand = new Random();
+        int r = rand.nextInt(high-low+1) + low;
+        Comparable t = arr[r];
+        arr[low] = arr[r];
         while (low < high){
             while (high > low && t.compareTo(arr[high]) < 0){
                 high--;
@@ -29,4 +34,15 @@ public class QuickSort {
         sort(arr, low+1, j);
     }
 
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int c = scan.nextInt();
+        Integer[] arr = new Integer[c];
+        for(int i = 0; i < c; i++){
+            arr[i] = scan.nextInt();
+        }
+//        QuickSort.sort(arr);
+        RandomizeQuicksort.sort(arr);
+        System.out.print(Arrays.toString(arr));
+    }
 }
