@@ -1,4 +1,4 @@
-package myquickSort;
+package MySort.myquickSort;
 
 import java.lang.Comparable;
 

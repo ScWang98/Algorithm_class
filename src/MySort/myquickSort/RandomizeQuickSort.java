@@ -1,10 +1,10 @@
-package myquickSort;
+package MySort.myquickSort;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class RandomizeQuicksort {
+public class RandomizeQuickSort {
     public static void sort(Comparable[] arr){
         sort(arr, 0, arr.length - 1);
 
@@ -42,7 +42,7 @@ public class RandomizeQuicksort {
             arr[i] = scan.nextInt();
         }
 //        QuickSort.sort(arr);
-        RandomizeQuicksort.sort(arr);
+        RandomizeQuickSort.sort(arr);
         System.out.print(Arrays.toString(arr));
     }
 }

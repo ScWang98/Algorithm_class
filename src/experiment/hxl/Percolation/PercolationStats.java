@@ -1,4 +1,4 @@
-package experiment.hxl;
+package experiment.hxl.Percolation;
 import java.util.Scanner;
 import java.util.*;
 

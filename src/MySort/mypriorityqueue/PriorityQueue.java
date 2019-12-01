@@ -1,4 +1,4 @@
-package mypriorityqueue;
+package MySort.mypriorityqueue;
 import java.lang.Comparable;
 
 public class PriorityQueue {

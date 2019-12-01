@@ -1,4 +1,4 @@
-package mypriorityqueue;
+package MySort.mypriorityqueue;
 
 public class HeapSort {
     public static void sort(Comparable[] arr){

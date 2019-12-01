@@ -1,10 +1,10 @@
-package myquickSort;
+package MySort.myquickSort;
 
 import java.lang.Comparable;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Dijsktra_3way_quicksort {
+public class Dijsktra3wayQuickSort {
     public static void sort(Comparable[] arr){
         sort(arr, 0, arr.length - 1);
     }
@@ -42,7 +42,7 @@ public class Dijsktra_3way_quicksort {
             arr[i] = scan.nextInt();
         }
 //        QuickSort.sort(arr);
-        Dijsktra_3way_quicksort.sort(arr);
+        Dijsktra3wayQuickSort.sort(arr);
         System.out.print(Arrays.toString(arr));
     }
 }

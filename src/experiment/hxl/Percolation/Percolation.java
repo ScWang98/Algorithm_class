@@ -1,7 +1,7 @@
-package experiment.hxl;
+package experiment.hxl.Percolation;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.*;
+
 public class Percolation{
     private WeightedQuickUnionUF UF;
     private int N;

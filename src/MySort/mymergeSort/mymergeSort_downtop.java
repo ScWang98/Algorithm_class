@@ -1,21 +1,16 @@
-package mymergeSort;
-import java.lang.Comparable;
+package MySort.mymergeSort;
+import java.lang.Math;
 import java.util.Scanner;
 
-public class mymergeSort_topdown {
+public class mymergeSort_downtop {
     private static Comparable[] aux;
-    public static void mergeSort(Comparable[] arr){
+    public static void sort(Comparable[] arr){
         aux = new Comparable[arr.length];
-        sort(arr, 0, arr.length-1);
-    }
-
-    public static void sort(Comparable[] arr, int low, int hig){
-        if(hig <= low)
-            return;
-        int mid = low + (hig - low) / 2;
-        sort(arr, low, mid);
-        sort(arr, mid+1, hig);
-        merge(arr, low, mid, hig);
+        for(int i = 1; i < arr.length; i *= 2){
+            for(int j = 0; j < arr.length; j += i*2){
+                merge(arr, j, j + i - 1, Math.min(j+i+i-1, arr.length-1));
+            }
+        }
     }
 
     public static void merge(Comparable[] arr, int low, int mid, int hig){
@@ -40,7 +35,7 @@ public class mymergeSort_topdown {
         Integer[] arr = new Integer[n];
         for(int i = 0; i < n; i++)
             arr[i] = scan.nextInt();
-        mergeSort(arr);
+        sort(arr);
         for(int i = 0; i < n; i++)
             System.out.printf("%d ", arr[i]);
     }

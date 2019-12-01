@@ -1,4 +1,4 @@
-package experiment.hxl;
+package experiment.hxl.Percolation;
 public class WeightedQuickUnionUF {
     private int[] id;
     private int[] sz;

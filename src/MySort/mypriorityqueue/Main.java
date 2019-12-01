@@ -1,4 +1,4 @@
-package mypriorityqueue;
+package MySort.mypriorityqueue;
 
 import java.util.Arrays;
 import java.util.Scanner;
