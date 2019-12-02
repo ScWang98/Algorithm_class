@@ -31,13 +31,13 @@ public class SortCompare {
         long sum_memory = 0;
         for (int i = 0; i < 10; i++){
             Runtime.getRuntime().gc();
-            long time_start = System.nanoTime();
-            long memory_start = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
 
             for(int j = 0; j < num; j++){
                 arr[j] = random.nextInt(1000000);
             }
 
+            long time_start = System.nanoTime();
+            long memory_start = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
 
             switch (way){
                 case 1 : {
@@ -67,12 +67,12 @@ public class SortCompare {
             long time_end = System.nanoTime();
             long memory_end = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
 
-            System.out.printf("Time: %dns \t\tMemory: %d\n", time_end-time_start, memory_end-memory_start);
+            System.out.printf("Time: %fms \t\tMemory: %fKB\n", (time_end-time_start)/1000000.0, (memory_end-memory_start)/1024.0);
 
             sum_time += time_end-time_start;
             sum_memory += memory_end-memory_start;
         }
-        System.out.printf("Average time: %.3fns \nAverage memory: %.3fB", sum_time/10.0, sum_memory/10.0);
+        System.out.printf("Average time: %.3fms \nAverage memory: %.3fKB", sum_time/10000000.0, sum_memory/10240.0);
 
 
 
