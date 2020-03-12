@@ -4,15 +4,15 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 public class UI extends JFrame {
-    static final long serialVersionUID = 1L;
-    static UI ui;
-    static Image image;
-    static Graphics2D screen;
-    static double x = 0.0, y = 0.0;
-    static Insets insets;
-    static int width, height;
-    static Color background = Color.white;
-    static Color foreground = Color.green;
+    private static final long serialVersionUID = 1L;
+    private static UI ui;
+    private static Image image;
+    private static Graphics2D screen;
+    private static double x = 0.0, y = 0.0;
+    private static Insets insets;
+    private static int width, height;
+    private static Color background = Color.white;
+    private static Color foreground = Color.green;
     public static void createUI(int width, int height) {
 
         ui = new UI();
